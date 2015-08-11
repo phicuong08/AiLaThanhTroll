@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@+id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:ads="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0">
+
+<LinearLayout android:orientation="vertical" android:id="@+id/lin_question" android:background="@drawable/bg_1" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@+id/RelativeLayout1" android:layout_alignParentTop="true">
+
+            <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:fillViewport="true">
+
+                <TextView
+                    android:id="@+id/txtQuestonContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:padding="3.0dip"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="1.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="0.6"
+                    android:textColor="@color/white"
+                    android:textSize="20.0sp" />
+
+            </ScrollView>
+        </LinearLayout>
+        <View android:id="@+id/view1" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+        <RelativeLayout android:orientation="vertical" android:id="@+id/RelativeLayout1" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/view1" android:layout_alignParentLeft="true">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <ImageButton android:id="@+id/sharefb" android:background="@drawable/facebook_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:gravity="center" android:id="@+id/txtQuestionNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Cau hoi" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:id="@+id/txtFap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fapi" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="50.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+
+                <Button
+                    android:id="@+id/btA"
+                    style="@style/btnNormalStyle_as"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="4.0dip"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_marginTop="8.0dip"
+                    android:layout_weight="50.0"
+                    android:shadowColor="#ff000000"
+                    android:shadowDx="1.0"
+                    android:shadowDy="1.0"
+                    android:shadowRadius="0.6"
+                    android:textColor="#ffffffff"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold" />
+
+                <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/btB" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.6" android:layout_weight="50.0" style="@style/btnNormalStyle_as" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="50.0">
+                <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/btC" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="8.0dip" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.6" android:layout_weight="50.0" style="@style/btnNormalStyle_as" />
+                <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/btD" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.6" android:layout_weight="50.0" style="@style/btnNormalStyle_as" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@+id/toast_layout_root" android:background="@drawable/backgroundtoast" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip" android:src="@drawable/ic_launcher" />
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:id="@+id/tvtoast" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

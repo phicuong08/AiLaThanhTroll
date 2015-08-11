@@ -1,0 +1,14 @@
+Certificate expires on Thu Oct 21 22:53:29 ICT 3013.
+Certificate fingerprints:
+MD5 : 91:BB:0F:48:5E:38:46:3D:E3:01:D5:A7:5D:17:18:C8
+SHA1: FF:26:A4:56:82:8C:74:99:2E:7D:43:2F:E9:91:80:C3:95:76:9E:EB
+WARNING: destination file already exists
+
+get hash code facebook:
+
+Download the openssl for windows here
+now unzip to c drive
+open cmd prompt
+type cd C:\Program Files\Java\jdk1.6.0_26\bin
+then type only keytool -export -alias phicuong -keystore KeyNPC | openssl sha1 -binary | openssl enc -a -e
+Done

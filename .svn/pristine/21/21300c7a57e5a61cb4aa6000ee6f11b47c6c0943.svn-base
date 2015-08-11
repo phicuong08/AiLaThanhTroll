@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai là thánh troll</string>
+    <string name="database_name">databasecauhoi.db</string>
+    <string name="auth_client_using_bad_version_title">An application attempted to use a bad version of Google Play Services.</string>
+    <string name="auth_client_needs_enabling_title">An application requires Google Play Services to be enabled.</string>
+    <string name="auth_client_needs_installation_title">An application requires installation of Google Play Services.</string>
+    <string name="auth_client_needs_update_title">An application requires an update for Google Play Services.</string>
+    <string name="auth_client_play_services_err_notification_msg">Google Play services error</string>
+    <string name="auth_client_requested_by_msg">Requested by %1$s</string>
+    <string name="location_client_powered_by_google">Powered by Google</string>
+    <string name="ad_unit_id">ca-app-pub-9130910269985065/8550871436</string>
+    <string name="ga_trackingId">UA-51497141-3</string>
+    
+	  <!--Enable automatic activity tracking-->
+	  <bool name="ga_autoActivityTracking">true</bool>
+	
+	  <!--Enable automatic exception tracking-->
+	  <bool name="ga_reportUncaughtExceptions">true</bool>
+	  
+    <string name="facebook_app_id">1680792068799940</string>
+    <string name="app_secret">203151909b2ec74fdb27e7e678e2e84d</string>
+    <string name="facebook_heading">Ai là thánh troll</string>
+    <string name="facebook_caption">Have you tried it?</string>
+    <string name="facebook_message">Nếu bạn thấy hay thì hảy share với bạn bè</string>
+    <string name="facebook_description">Ai là thánh troll đang chờ bạn chinh phục ^-^</string>
+    <string name="facebook_badgeIconURL">http://taigameandroids.com/wp-content/uploads/2014/05/game-ai-la-thanh-troll.jpg</string>
+    <string name="link_googlePlay">https://play.google.com/store/apps/details?id=vn.ailathanhtroll2</string>
+	<string name="game_over">Bạn quá thông minh và cực kỳ nguy hiểm nhưng cũng éo thể vượt qua được =))</string>
+	<string name="gameover">Cay quá, làm phát nữa.</string>
+	<string name="game_win_lv1">Chúc mừng bạn bạn đã vượt qua 69 câu hỏi và đạt được danh hiệu...</string>
+	<string name="game_win_lv2">Chúc mừng bạn với độ bựa cực cao, bạn là thanh niên nghiêm túc vl mà chúng tôi đang tìm kiếm...</string>
+	<string name="next_round">Chiến tiếp vòng 2</string>
+	<string name="danhhieu_lv1">Troll Fang Fap</string>
+	<string name="danhhieu_lv2">Thánh Troll</string>
+	<string name="num_quest">Câu sô: </string>
+	<string name="fap">Fap: </string>
+	<string name="lv_question10">Chúc mừng bạn vượt qua câu 10 và đạt được danh hiệu...</string>
+	<string name="lv_question20">Chúc mừng bạn vượt qua câu 20 và đạt được danh hiệu...</string>
+	<string name="lv_question50">Chúc mừng bạn vượt qua câu 50 và đạt được danh hiệu...</string>
+	<string name="troll_lv1">Troll Mới Sinh</string>
+	<string name="troll_lv2">Troll tập sự</string>
+	<string name="troll_lv3">Troll trẻ trâu</string>
+	<string name="troll_lv4">Troll Cao Đẳng</string>
+	<string name="troll_lv5">Troll Đại Học</string>
+	<string name="cant_Next_lv">Vội vã làm gì, vui lòng chiến xong vòng 1 đã bạn =)) </string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/titlegamewin" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@+id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/game_over" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_weight="100.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="5.0dip" android:layout_weight="70.0">
+            <ImageView android:layout_gravity="center" android:id="@+id/imageView1" android:padding="50.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/troll_none" android:scaleType="centerInside" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="30.0">
+            <TextView android:textSize="@dimen/mainmenu_large_text" android:textStyle="bold" android:textColor="@color/red" android:layout_gravity="center" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Game Over" />
+            <Button android:layout_gravity="bottom|center" android:id="@+id/button1" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:minHeight="40.0dip" android:text="@string/gameover" style="@style/btnNormalStyle_as" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView android:layout_gravity="center" android:id="@+id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" ads:adSize="SMART_BANNER" ads:adUnitId="@string/ad_unit_id" />
+    </LinearLayout>
+</LinearLayout>

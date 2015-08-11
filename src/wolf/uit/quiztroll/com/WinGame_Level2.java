@@ -1,0 +1,51 @@
+package wolf.uit.quiztroll.com;
+
+import com.ckt.android.kingtroll.R;
+import android.app.Activity;
+import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class WinGame_Level2 extends Activity
+{
+  Typeface face;
+  MediaPlayer mp;
+  TextView tvdanhhieu;
+  TextView tvthongbao;
+
+  public void onBackPressed()
+  {
+    finish();
+  }
+
+  protected void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    requestWindowFeature(1);
+    setContentView(R.layout.activity_win_game__level2);
+    this.tvthongbao = ((TextView)findViewById(R.id.tvthongbao));
+    this.tvdanhhieu = ((TextView)findViewById(R.id.tvdanhhieu));
+    this.face = Typeface.createFromAsset(getAssets(), "Arial.ttf");
+    this.tvthongbao.setTypeface(this.face, 1);
+    this.tvdanhhieu.setTypeface(this.face, 1);
+    this.mp = MediaPlayer.create(this, R.raw.win);
+    play();
+  }
+
+  protected void onPause()
+  {
+    super.onPause();
+  }
+
+  public void play()
+  {
+    if (this.mp.isPlaying())
+    {
+      this.mp.stop();
+      this.mp.reset();
+    }
+    this.mp = MediaPlayer.create(this, R.raw.win);
+    this.mp.start();
+  }
+}

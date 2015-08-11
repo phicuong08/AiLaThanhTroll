@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+    package="com.ckt.android.kingtroll"
+    android:versionCode="107"
+    android:versionName="1.0.7"
+    android:installLocation="auto">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" 
+        android:label="@string/app_name" android:theme="@style/AppTheme">
+	<meta-data
+     	android:name="com.google.android.gms.games.APP_ID"
+     	android:value="@string/app_id" />
+	<meta-data android:name="com.google.android.gms.version"
+		android:value="@integer/google_play_services_version" />
+        <activity android:label="@string/app_name" android:name="wolf.uit.quiztroll.com.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="wolf.uit.quiztroll.com.About" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.Mainquiztroll" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.Mainquiztroll_level2" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.GameOver_Level1" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.WinGame_level1" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.LevelGame" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.Danhhieu_level1" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.Danhhieu_level2" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.GameOver_Level2" android:screenOrientation="portrait"/>
+        <activity android:name="wolf.uit.quiztroll.com.WinGame_Level2" android:screenOrientation="portrait"/>
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:name="com.google.android.gms.ads.AdView"
+               android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+		<activity android:name="com.facebook.FacebookActivity"
+	        android:configChanges=
+	               "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+	        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+	        android:label="@string/app_name" />
+		 <activity android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+		<meta-data android:name="com.facebook.sdk.ApplicationId"
+         	android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.startapp.android.eula.EULAActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.startapp.android.publish.list3d.List3DActivity" android:taskAffinity="wolf.uit.quiztroll.com.AppWall" android:theme="@android:style/Theme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.startapp.android.publish.AppWallActivity" android:taskAffinity="wolf.uit.quiztroll.com.AppWall" android:theme="@android:style/Theme.Translucent"/>
+    </application>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+</manifest>

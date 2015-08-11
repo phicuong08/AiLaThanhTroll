@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ai là thánh troll</string>
+    <string name="database_name">databasecauhoi.db</string>
+    <string name="auth_client_using_bad_version_title">An application attempted to use a bad version of Google Play Services.</string>
+    <string name="auth_client_needs_enabling_title">An application requires Google Play Services to be enabled.</string>
+    <string name="auth_client_needs_installation_title">An application requires installation of Google Play Services.</string>
+    <string name="auth_client_needs_update_title">An application requires an update for Google Play Services.</string>
+    <string name="auth_client_play_services_err_notification_msg">Google Play services error</string>
+    <string name="auth_client_requested_by_msg">Requested by %1$s</string>
+    <string name="location_client_powered_by_google">Powered by Google</string>
+    <string name="ad_unit_id">ca-app-pub-9130910269985065/3653594636</string>
+    <string name="ga_trackingId">UA-19751128-53</string>
+    <string name="facebook_app_id">1680792068799940</string>
+    <string name="app_secret">203151909b2ec74fdb27e7e678e2e84d</string>
+    <string name="facebook_heading">Ai là thánh troll</string>
+    <string name="facebook_caption">Have you tried it?</string>
+    <string name="facebook_message_lv1_20question">bbbbbbbbbbbbbbb</string>
+    <string name="facebook_description_lv1_20question">aaaaaaaaaaaaaaaaaaaaaaaa</string>
+    <string name="facebook_badgeIconURL">http://upload.wikimedia.org/wikipedia/commons/6/6f/ChessSet.jpg</string>
+</resources>

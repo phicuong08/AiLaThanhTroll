@@ -1,0 +1,16 @@
+version: 2.0.0
+apkFileName: vnailathanhtroll2apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+packageInfo:
+  forced-package-id: '127'
+versionInfo:
+  versionCode: '1'
+  versionName: '1.0'
+compressionType: false
+sharedLibrary: false
+unknownFiles:
+  manifest: '8'
+  wolf/uit/quiztroll/com/R.java1: '8'

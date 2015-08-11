@@ -1,0 +1,160 @@
+package wolf.uit.quiztroll.com;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.android.gms.ads.AdView;
+
+import java.io.IOException;
+
+import talaha.ailathanhtroll2.R;
+import wolf.uit.quiztroll.com.database.DBHelper;
+import wolf.uit.quiztroll.com.database.UserDBHandler;
+//social facebook
+import wolf.uit.quiztroll.com.facebook.EziSocialManager;
+import wolf.uit.quiztroll.com.facebook.FBConstants;
+
+public class MainActivity extends Activity {
+	private AdsHelper adsHelper;
+	ImageButton bt_facebook;
+	Button btAbout;
+	Button btExit;
+	Button btNew;
+	private DBHelper dbhelper;
+	Typeface face;
+	MediaPlayer mp;
+	private UserDBHandler userDBHandler;
+	private EziSocialManager s_facebook;
+
+	public void About() {
+		startActivity(new Intent(this, About.class));
+	}
+
+	public void AddEvent() {
+		this.bt_facebook.setOnClickListener(new View.OnClickListener(){
+			public void onClick(View paramView) {
+				if(s_facebook.isFacebookSessionActive()){
+					s_facebook.logoutFromFacebook();
+				}else
+				{
+					s_facebook.loginWithFacebook();
+				}
+			}
+		});
+		this.btNew.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View paramView) {
+				//MainActivity.this.adsHelper.loadInterstitial(
+				//		"ca-app-pub-9130910269985065/4399873438", false);
+				MainActivity.this.play(0);
+				MainActivity.this.OpenGame();
+			}
+		});
+		this.btAbout.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View paramView) {
+				MainActivity.this.play(0);
+				MainActivity.this.About();
+			}
+		});
+		this.btExit.setOnClickListener(new View.OnClickListener() {
+			@SuppressLint({ "NewApi" })
+			public void onClick(View paramView) {
+				//MainActivity.this.adsHelper.showInterstitial();
+				MainActivity.this.play(0);
+				MainActivity.this.onBackPressed();
+			}
+		});
+	}
+
+	public void OpenGame() {
+		startActivity(new Intent(this, LevelGame.class));
+	}
+
+	public void getForm() {
+		this.face = Typeface.createFromAsset(getAssets(), "Arial.ttf");
+		this.bt_facebook=((ImageButton)findViewById(R.id.fb_social));
+		this.btNew = ((Button) findViewById(R.id.new_button));
+		this.btAbout = ((Button) findViewById(R.id.about_button));
+		this.btExit = ((Button) findViewById(R.id.exit_button));
+		this.mp = MediaPlayer.create(this, R.raw.click);
+		this.btNew.setTypeface(this.face, 1);
+		this.btAbout.setTypeface(this.face, 1);
+		this.btExit.setTypeface(this.face, 1);
+	}
+
+	@SuppressLint({ "NewApi" })
+	public void onBackPressed() {
+		super.onBackPressed();
+	}
+
+	protected void onCreate(Bundle paramBundle) {
+		super.onCreate(paramBundle);
+//social facebook
+		s_facebook =new EziSocialManager(this, this);
+		s_facebook.initWithActivity("email,user_birthday,user_friends,public_profile");
+		
+		//this.adsHelper = new AdsHelper(this);
+		//this.adsHelper.loadInterstitial(
+		//		"ca-app-pub-9331099152410033/9982929373", true);
+		requestWindowFeature(1);
+		setContentView(R.layout.activity_main);
+		getForm();
+		this.dbhelper = new DBHelper(this);
+		this.userDBHandler = new UserDBHandler(this);
+		
+		try {
+			if (this.dbhelper.createDataBase()) {
+				this.userDBHandler.open();
+				this.userDBHandler.close();
+			}
+			AddEvent();
+			return;
+		} catch (IOException localIOException) { 
+			localIOException.printStackTrace();
+		}
+	}
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+		if (s_facebook != null)
+		{
+			if (requestCode == FBConstants.FACEBOOK_ACTIVITY_LOGIN)
+				s_facebook.onActivityResult(requestCode, resultCode, data); 			
+		}
+    }
+	public void onPause() {
+		super.onPause();
+	}
+
+	public void onStart() {
+		super.onStart();
+		EasyTracker.getInstance(this).activityStart(this);
+	}
+
+	public void onStop() {
+		super.onStop();
+		EasyTracker.getInstance(this).activityStop(this);
+	}
+
+	public void play(int paramInt) {
+		if (this.mp.isPlaying()) {
+			this.mp.stop();
+			this.mp.reset();
+		}
+		if (paramInt == 0)
+			this.mp = MediaPlayer.create(this, R.raw.click);
+		if (paramInt == 1)
+			this.mp = MediaPlayer.create(this, R.raw.buzz);
+		this.mp.start();
+	}
+}

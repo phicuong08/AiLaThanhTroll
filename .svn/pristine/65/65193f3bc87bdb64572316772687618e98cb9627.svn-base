@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_width_Question">75.0dip</dimen>
+    <dimen name="layout_width_Question2">100.0dip</dimen>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="height_button">50.0dip</dimen>
+	<dimen name="titlegameover">20.0sp</dimen>
+	<dimen name="titlegamewin">20.0sp</dimen>
+	<dimen name="mainmenu_large_text">30.0sp</dimen>
+	<dimen name="mainmenu_normal_text">20.0sp</dimen>
+</resources>
